@@ -4,7 +4,7 @@ def get_word_from_list(dificultylevel,wordvalue):
 
 def set_lives(x):
     '''sets the number of incorrect guesses a player can make before a game over'''
-    return x
+
 
 def player_life():
     '''
