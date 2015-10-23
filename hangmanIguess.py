@@ -53,3 +53,4 @@ def test_get_word ():
     get_word_from_list(['foo','bar','baz'],4)
 
 main()
+print("doot doot")
