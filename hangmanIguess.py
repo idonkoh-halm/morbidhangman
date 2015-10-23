@@ -2,9 +2,9 @@ def get_word_from_list(dificultylevel,wordvalue):
     '''retrieves word from list, given requested dificulty level and word to choose'''
     pass
 
-def set_lives():
+def set_lives(x):
     '''sets the number of incorrect guesses a player can make before a game over'''
-    pass
+    return x
 
 def player_life():
     '''
@@ -20,19 +20,19 @@ def update_word():
 def do_victory_thing():
     pass
 
-def display_lives (lives):
-    print 'You have ',lives,'lives'
-    if lives==1:
-		print 'Ah snap dood, you only got ', lives, 'life left!'
+def display_lives (set_lives):
+    print 'You have ',set_lives,'lives'
+    if set_lives==1:
+		print 'Ah snap dood, you only got ', set_lives, 'life left!'
 
 def get_player_guess (): pass
 
 def main ():
-    lives = 10
+    set_lives(10)
     wordlist = ['foo','bar']
     word = get_word_from_list(wordlist,7)
-    while lives:
-        display_lives(lives)
+    while set_lives:
+        display_lives(set_lives)
         guess = get_player_guess()
         right = check_guess(guess)
 	if right: 
@@ -41,8 +41,8 @@ def main ():
                 do_victory_thing()
                 return
         else:
-            lives = lives - 1
-	if lives==0:
+            set_lives = set_lives - 1
+	if set_lives==0:
 		print 'game over man, game over.'
 		
 
