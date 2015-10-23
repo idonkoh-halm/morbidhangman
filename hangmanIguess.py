@@ -6,12 +6,8 @@ def set_lives():
     '''sets the number of incorrect guesses a player can make before a game over'''
     pass
 
-def remove_life():
-     '''updates lives remaining after a incorrect guess was made'''
-     pass
-
 def player_life():
-    ''
+    '''
     pass
 
 def check_guess(guess):
