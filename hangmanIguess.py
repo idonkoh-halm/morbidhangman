@@ -11,7 +11,7 @@ def player_life():
     pass
 
 def check_guess(guess):
-    '''checks if letter is in the selected word, and returns true or false.'''
+    '''#checks if letter is in the selected word, and returns true or false.'''
     pass
 
 def update_word():
