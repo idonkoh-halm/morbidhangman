@@ -1,6 +1,7 @@
 def get_word_from_list(dificultylevel,wordvalue):
     '''retrieves word from list, given requested dificulty level and word to choose'''
-    pass
+   raw_input
+    1=="test"
 
 
 def player_life():
