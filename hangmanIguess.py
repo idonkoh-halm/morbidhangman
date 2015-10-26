@@ -1,14 +1,15 @@
 def get_word_from_list(wordvalue):
     '''retrieves word from list, given requested dificulty level and word to choose'''
-    1=="test"
-    return 1
+   wordvalue=raw_input("Which word would you like to guess?")
+    word=='test'
+    letter='t'
+    letter='e'
+    letter='s'
+    letter='t'
+    wordvalue='test'
+    if letter in word:
+        print 'there is a' letter,word
     
-
-
-def player_life():
-    '''
-    pass
-    '''
 
 def check_guess(guess):
     '''
@@ -29,9 +30,9 @@ def display_lives (lives):
 def get_player_guess (): pass
 
 def main ():
-    wordvalue=raw_input("Which word would you like to guess?")
     lives=10
-    word = get_word_from_list(1)
+    "test" = get_word_from_list(1)
+    "dad"=get_word_from_list(2)
     while lives:
         display_lives(lives)
         guess = get_player_guess()
@@ -56,4 +57,4 @@ def test_get_word ():
 main()
 print("doot doot")
 print get_word_from_list(1)
-
+print get_word_from_list(2)
