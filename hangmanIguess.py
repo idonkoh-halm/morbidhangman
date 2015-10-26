@@ -1,15 +1,14 @@
 def get_word_from_list(wordvalue):
     '''retrieves word from list, given requested dificulty level and word to choose'''
-   wordvalue=raw_input("Which word would you like to guess?")
-    word=='test'
+    wordvalue=raw_input("Which word would you like to guess?")
+    word='test'
     letter='t'
     letter='e'
     letter='s'
     letter='t'
     wordvalue='test'
     if letter in word:
-        print 'there is a' letter,word
-    
+        print "there is a'" letter   
 
 def check_guess(guess):
     '''
