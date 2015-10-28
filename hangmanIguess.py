@@ -1,14 +1,10 @@
-def get_word_from_list(wordvalue):
+def get_word_from_list():
     '''retrieves word from list, given requested dificulty level and word to choose'''
-    wordvalue=raw_input("Which word would you like to guess?")
-    word='test'
-    letter='t'
-    letter='e'
-    letter='s'
-    letter='t'
-    wordvalue='test'
-    if letter in word:
-        print "there is a'" letter   
+    wordvalue=int(raw_input("Which word would you like to guess?"))
+    if wordvalue==1:
+        print 'test'
+    if wordvalue==2:
+        print 'dad'
 
 def check_guess(guess):
     '''
@@ -19,7 +15,9 @@ def update_word():
     pass
 
 def do_victory_thing():
-    pass
+    player=raw_input("What's your name?")
+    print player +', you won the game.'
+    
 
 def display_lives (lives):
     print 'You have ',lives,'lives'
@@ -28,16 +26,15 @@ def display_lives (lives):
 
 def get_player_guess (): pass
 
+
 def main ():
     lives=10
-    "test" = get_word_from_list(1)
-    "dad"=get_word_from_list(2)
     while lives:
         display_lives(lives)
         guess = get_player_guess()
         right = check_guess(guess)
 	if right: 
-            victory = update_word(word, guess)
+            victory = true
             if victory:
                 do_victory_thing()
                 return
@@ -45,7 +42,8 @@ def main ():
             lives = lives - 1
 	if lives==0:
 		print 'game over man, game over.'
-		
+        do_victory_thing()
+        
 
 def test_get_word ():
     get_word_from_list(['foo','bar','baz'],1)
@@ -55,5 +53,6 @@ def test_get_word ():
 
 main()
 print("doot doot")
-print get_word_from_list(1)
-print get_word_from_list(2)
+get_word_from_list()
+
+
