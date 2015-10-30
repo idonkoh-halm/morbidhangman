@@ -1,10 +1,12 @@
 def get_word_from_list():
-    '''retrieves word from list, given requested dificulty level and word to choose'''
-    wordvalue=int(raw_input("Which word would you like to guess?"))
-    if wordvalue==1:
-        print 'test'
-    if wordvalue==2:
-        print 'dad'
+    '''retrieves word from a list following a player chosen number that represents a word from that list.'''
+    a = ['Mario','Link','Pikachu','Donkey Kong', 'Samus', 'Fox', 'Yoshi', 'Kirby','Luigi','Captain Falcon', 'Ness', 'Jigglypuff']
+    
+
+    wordvalue=int(raw_input("Pick a number between 0 and 11."))
+    for i in range (1):
+            print a[wordvalue]
+
 
 def check_guess(guess):
     '''
@@ -22,9 +24,10 @@ def do_victory_thing():
 def display_lives (lives):
     print 'You have ',lives,'lives'
     if lives==1:
-		print 'Ah snap dood, you only got ', lives, 'life left!'
+	print 'Ah snap dood, you only got ', lives, 'life left!'
 
-def get_player_guess (): pass
+def get_player_guess ():
+    pass
 
 
 def main ():
@@ -43,16 +46,16 @@ def main ():
 	if lives==0:
 		print 'game over man, game over.'
         do_victory_thing()
-        
+            
 
 def test_get_word ():
-    get_word_from_list(['foo','bar','baz'],1)
-    get_word_from_list(['foo','bar','baz'],2)
-    get_word_from_list(['foo','bar','baz'],3)
-    get_word_from_list(['foo','bar','baz'],4)
+    for i in range (12):
+        get_word_from_list()
+test_get_word()
+#main()
 
-main()
-print("doot doot")
-get_word_from_list()
+
+
+
 
 
