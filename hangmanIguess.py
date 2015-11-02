@@ -2,20 +2,9 @@ def get_word_from_list():
 
     '''retrieves word from a list following a player chosen number that represents a word from that list.'''
     a = ['Mario','Link','Pikachu','Donkey Kong', 'Samus', 'Fox', 'Yoshi', 'Kirby','Luigi','Captain Falcon', 'Ness', 'Jigglypuff']
-    
-
     wordvalue=int(raw_input("Pick a number between 0 and 11."))
     for i in range (1):
-            print a[wordvalue]
-
-
-    '''retrieves word from list, given requested dificulty level and word to choose'''
-    wordvalue=int(raw_input("Which word would you like to guess?"))
-    if wordvalue==1:
-        print 'test'
-    if wordvalue==2:
-        print 'dad'
-        
+            print a[wordvalue]        
 
     
 def check_guess (word, guess):
@@ -25,10 +14,10 @@ def check_guess (word, guess):
     """
     search = guess
     word.find(search)
-    if guess is in word     
-     print 'true'
-    elif
-    print false
+    if guess in word:     
+        print 'true'
+    else:
+        print 'false'
     
     
     pass
@@ -49,12 +38,9 @@ def display_lives (lives):
 	print 'Ah snap dood, you only got ', lives, 'life left!'
 
 def get_player_guess ():
-<<<<<<< Updated upstream
+
     pass
-=======
     raw_input("what is you guess?")
-     
->>>>>>> Stashed changes
 
 
 def main ():
@@ -76,19 +62,9 @@ def main ():
             
 
 def test_get_word ():
-<<<<<<< Updated upstream
     for i in range (12):
         get_word_from_list()
-test_get_word()
-#main()
 
-
-
-=======
-    get_word_from_list(['foo','bar','baz'],1)
-    get_word_from_list(['foo','bar','baz'],2)
-    get_word_from_list(['foo','bar','baz'],3)
-    get_word_from_list(['foo','bar','baz'],4)
 
 def test_check_guess ():
     if check_guess('python','a')==False:
@@ -106,8 +82,7 @@ def test_check_guess ():
             
 
 
-test_check_guess()
->>>>>>> Stashed changes
+test_get_word()
 
 
 
