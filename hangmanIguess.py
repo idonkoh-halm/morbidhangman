@@ -1,14 +1,12 @@
 def get_word_from_list():
 #Get word from list function made by Isaac.
-    '''Retrieves word from a list following a player chosen number that represents a word from that list. Will also generate blanks in place of letters.'''
+    '''Retrieves word from a list following a player chosen number that represents a word from that list.'''
     a = ['Mario','Link','Pikachu','Donkey Kong', 'Samus', 'Fox', 'Yoshi', 'Kirby','Luigi','Captain Falcon', 'Ness', 'Jigglypuff']
     wordvalue=int(raw_input("Pick a number between 0 and 11."))
     #print a[wordvalue]
-    return a[wordvalue]
+    return a[wordvalue]    
 
-    
 
-    
 def check_guess (word, guess):
     """Look through word for letter.
     If it is wrong, return False
@@ -59,7 +57,11 @@ def main ():
                 return
         else:
             lives = lives - 1
-	if lives==0:
+	if 
+def test_check_guess ():
+    if check_guess('python','a')==False:
+        print 'Success'
+    else:lives==0:
 		print 'game over man, game over.'
         do_victory_thing()
             
@@ -83,5 +85,5 @@ def test_check_guess ():
         print 'Failed with capital letter'
             
 
-
+print word
 test_get_word()
