@@ -4,7 +4,8 @@ def get_word_from_list():
     a = ['Mario','Link','Pikachu','Donkey Kong', 'Samus', 'Fox', 'Yoshi', 'Kirby','Luigi','Captain Falcon', 'Ness', 'Jigglypuff']
     wordvalue=int(raw_input("Pick a number between 0 and 11."))
     #print a[wordvalue]
-    return a[wordvalue]    
+    return a[wordvalue]
+
 
 
 def check_guess (word, guess):
@@ -57,13 +58,12 @@ def main ():
                 return
         else:
             lives = lives - 1
-	if 
 def test_check_guess ():
     if check_guess('python','a')==False:
         print 'Success'
-    else:lives==0:
-		print 'game over man, game over.'
-        do_victory_thing()
+    if lives==0:
+        print 'game over man, game over.'
+    do_victory_thing()
             
 
 def test_get_word ():
@@ -85,5 +85,6 @@ def test_check_guess ():
         print 'Failed with capital letter'
             
 
-print word
-test_get_word()
+
+get_word_from_list()
+
