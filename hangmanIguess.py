@@ -16,15 +16,14 @@ def check_guess (word, guess):
     search = guess
     word.find(search)
     if guess in word:     
-        print 'true'
+        return True
     else:
-        print 'false'
-    
-    
+        return False
+       
     pass
 
-    
-
+def is_complete(guesses, word): #from hinkle extra help
+    return guesses==set(list(word))
 def update_word():
     pass
 
@@ -39,25 +38,28 @@ def display_lives (lives):
 	print 'Ah snap dood, you only got ', lives, 'life left!'
 
 def get_player_guess ():
-
-    pass
-    raw_input("what is you guess?")
+    guess=raw_input("what is you guess?")
+    return guess
 
 
 def main ():
+    guesses=set()
     lives=10
     word=get_word_from_list()
     while lives:
         display_lives(lives)
         guess = get_player_guess()
-        right = check_guess(guess)
-	if right: 
-            victory = true
-            if victory:
+        right = check_guess(word, guess)
+	if right:
+            guesses.add(guess)
+            print guesses, word
+            complete = is_complete(guesses, word)
+            if complete:        
                 do_victory_thing()
                 return
         else:
             lives = lives - 1
+            
 def test_check_guess ():
     if check_guess('python','a')==False:
         print 'Success'
@@ -84,7 +86,14 @@ def test_check_guess ():
     else:
         print 'Failed with capital letter'
             
+def test_is_complete():
+    print 'true?', is_complete(set(list('Mario')), 'Mario')
+    print 'false?', is_complete(set(list('Mario')), 'Luigi')
+    print 'true?', is_complete(set(list('Link')), 'Link')
+    print 'false?', is_complete(set(list('Link')), 'Zelda')
 
-
-get_word_from_list()
-
+#main()
+#get_player_guess()
+#test_is_complete()
+ 
+main()
