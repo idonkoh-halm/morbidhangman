@@ -1,3 +1,4 @@
+import time
 def get_word_from_list():
 #Get word from list function made by Isaac.
     '''Retrieves word from a list following a player chosen number that represents a word from that list.'''
@@ -24,18 +25,19 @@ def check_guess (word, guess):
 
 def is_complete(guesses, word): #from hinkle extra help
     return guesses==set(list(word))
-def update_word():
-    pass
 
 def do_victory_thing():
     player=raw_input("What's your name?")
-    print player +', you won the game.'
+    print player +', you won the game!'
+
     
 
 def display_lives (lives):
     print 'You have ',lives,'lives'
     if lives==1:
 	print 'Ah snap dood, you only got ', lives, 'life left!'
+    if lives==0:
+        print 'Game over man, game over'
 
 def get_player_guess ():
     guess=raw_input("what is you guess?")
@@ -51,8 +53,8 @@ def main ():
         guess = get_player_guess()
         right = check_guess(word, guess)
 	if right:
+            print "You got it! There is a",guess
             guesses.add(guess)
-            print guesses, word
             complete = is_complete(guesses, word)
             if complete:        
                 do_victory_thing()
@@ -97,3 +99,4 @@ def test_is_complete():
 #test_is_complete()
  
 main()
+time.sleep(60)
