@@ -35,9 +35,8 @@ def do_victory_thing():
 def display_lives (lives):
     print 'You have ',lives,'lives'
     if lives==1:
-	print 'Ah snap dood, you only got ', lives, 'life left!'
-    if lives==0:
-        print 'Game over man, game over'
+	print 'The victim seems to be grasping for his final moments of life. He prays to the gods that another petty thief never goes through this ever again. You begin to feel your incompetence run through you. Choose your letter wisely, you only have ', lives, 'guess left.'
+
 
 def get_player_guess ():
     guess=raw_input("what is you guess?")
@@ -62,13 +61,17 @@ def main ():
         else:
             lives = lives - 1
             if lives==0:
-                print "game over man. game over."
+                print 'The chair holding the victim is kicked, securing his fate. A moment passes. Silence.'
+                time.sleep(5)
+                print 'You monster.'
             
 def test_check_guess ():
     if check_guess('python','a')==False:
         print 'Success'
     if lives==0:
-        print 'game over man, game over.'
+        print 'The chair holding the victim is kicked, securing his fate. A moment passes. Silence.'
+        time.sleep(5)
+        print 'You monster.'
     do_victory_thing()
             
 
@@ -96,7 +99,6 @@ def test_is_complete():
     print 'true?', is_complete(set(list('Link')), 'Link')
     print 'false?', is_complete(set(list('Link')), 'Zelda')
 
-#main()
 #get_player_guess()
 #test_is_complete()
  
