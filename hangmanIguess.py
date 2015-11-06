@@ -61,6 +61,8 @@ def main ():
                 return
         else:
             lives = lives - 1
+            if lives==0:
+                print "game over man. game over."
             
 def test_check_guess ():
     if check_guess('python','a')==False:
