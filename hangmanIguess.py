@@ -9,11 +9,11 @@ def get_word_from_list():
 
 
 
-def check_guess (word, guess):
+def check_guess (word,guess):
     """Look through word for letter.
-    If it is wrong, return False
-    If it is right, return True
-    """
+    If it is wrong:return False
+    If it is right, return True"""
+    #devin
     search = guess
     word.find(search)
     if guess in word:     
@@ -25,6 +25,13 @@ def check_guess (word, guess):
 
 def is_complete(guesses, word): #from hinkle extra help
     return guesses==set(list(word))
+    if guess in word: 
+        print 'true'
+    else:
+        print 'false'
+def update_word():
+    pass
+
 
 def do_victory_thing():
     player=raw_input("What's your name?")
@@ -40,8 +47,13 @@ def display_lives (lives):
         print 'Game over man, game over'
 
 def get_player_guess ():
+
     guess=raw_input("what is you guess?")
     return guess
+
+#devin
+    raw_input("what is you guess?")
+
 
 
 def main ():
@@ -50,33 +62,47 @@ def main ():
     word=get_word_from_list()
     while lives:
         display_lives(lives)
+
         guess = get_player_guess()
         right = check_guess(word, guess)
 	if right:
             print "You got it! There is a",guess
             guesses.add(guess)
             complete = is_complete(guesses, word)
-            if complete:        
+        if complete:
+            guess=get_player_guess()
+            right=check_guess(guess,word)
+	if right: 
+            victory = true
+            if victory:
+
                 do_victory_thing()
                 return
         else:
             lives = lives - 1
-            
+            if lives==0:
+                print "game over man, game over"
+
 def test_check_guess ():
     if check_guess('python','a')==False:
         print 'Success'
     if lives==0:
         print 'game over man, game over.'
     do_victory_thing()
+
+		print 'game over man, game over.'
+
             
 
 def test_get_word ():
-    for i in range (12):
+    for i in range (1):
         get_word_from_list()
+
         
 def test_check_guess ():
     if check_guess('python','a')==False:
-        print 'Success'
+    
+       print 'Success'
     else:
         print 'Fail'
     if check_guess('python','t')==True:
@@ -87,6 +113,7 @@ def test_check_guess ():
         print 'Success'
     else:
         print 'Failed with capital letter'
+
             
 def test_is_complete():
     print 'true?', is_complete(set(list('Mario')), 'Mario')
@@ -94,9 +121,5 @@ def test_is_complete():
     print 'true?', is_complete(set(list('Link')), 'Link')
     print 'false?', is_complete(set(list('Link')), 'Zelda')
 
-#main()
-#get_player_guess()
-#test_is_complete()
- 
 main()
 time.sleep(60)
