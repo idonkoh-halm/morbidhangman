@@ -15,7 +15,7 @@ def check_guess (word, guess):
     If it is right, return True
     """
     search = guess
-    word.find(search)
+    word.find(search) ## Oops -- this line doesn't do anything - TH
     if guess in word:     
         return True
     else:
@@ -88,7 +88,7 @@ def test_check_guess ():
         print 'Success'
     else:
         print 'Fail'
-    if check_guess('python','T')==True:
+    if check_guess('python','T')==True: ## This test still fails -- TH
         print 'Success'
     else:
         print 'Failed with capital letter'
@@ -100,7 +100,7 @@ def test_is_complete():
     print 'false?', is_complete(set(list('Link')), 'Zelda')
 
 #get_player_guess()
-#test_is_complete()
- 
-main()
-time.sleep(60)
+test_is_complete()
+test_check_guess() 
+#main()
+#time.sleep(60)
