@@ -27,6 +27,7 @@ def is_complete(guesses, word): #from hinkle extra help
     return guesses==set(list(word))
 
 def do_victory_thing():
+    
     player=raw_input("What's your name?")
     print player +', you won the game!'
 
@@ -52,11 +53,14 @@ def main ():
         guess = get_player_guess()
         right = check_guess(word, guess)
 	if right:
-            print "You got it! There is a",guess
+            print "You got it! There is a(n)",guess
             guesses.add(guess)
             complete = is_complete(guesses, word)
-            if complete:        
+            if complete:
+                print 'Your word was',word
+
                 do_victory_thing()
+                
                 return
         else:
             lives = lives - 1
