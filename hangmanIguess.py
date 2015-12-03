@@ -104,7 +104,7 @@ def test_is_complete():
     print 'false?', is_complete(set(list('Link')), 'Zelda')
 
 #get_player_guess()
-test_is_complete()
-test_check_guess() 
-#main()
-#time.sleep(60)
+#test_is_complete()
+#test_check_guess() 
+main()
+time.sleep(60)
