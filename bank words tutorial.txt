@@ -1,0 +1,84 @@
+Last login: Fri Oct 16 08:58:47 on ttys001
+hs-lab-13:~ programmer$ python
+Python 2.7.6 (default, Sep  9 2014, 15:04:36) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.39)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> w = "Isaac the great"
+>>> if "q" in w: print 'yes'
+... 
+>>> if "I" in w: print 'yes'
+... 
+yes
+>>> 
+>>> w.find('s')
+1
+>>> w.find('g')
+10
+>>> g= set('test')
+>>> g
+set(['s', 'e', 't'])
+>>> h = set('little')
+>>> h
+set(['i', 'e', 'l', 't'])
+>>> w.replace('a','_')
+'Is__c the gre_t'
+>>> w.replace('a','_').replace('I','_')
+'_s__c the gre_t'
+>>> letters = set(w)
+>>> letters
+set(['a', ' ', 'c', 'e', 'g', 'I', 'h', 's', 'r', 't'])
+>>> for l in letters:
+...     
+... 
+  File "<stdin>", line 3
+    
+    ^
+IndentationError: expected an indented block
+>>> ^D
+hs-lab-13:~ programmer$ python
+Python 2.7.6 (default, Sep  9 2014, 15:04:36) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.39)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> w  = 'Isaac the Great'
+>>> letters = set(w)
+>>> letters
+set(['a', ' ', 'c', 'e', 'G', 'I', 'h', 's', 'r', 't'])
+>>> letters.remove(' ')
+>>> letters = set(w.lower())
+>>> letters
+set(['a', ' ', 'c', 'e', 'g', 'i', 'h', 's', 'r', 't'])
+>>> letters = set(w.lower().replace(' ',''))
+>>> letters
+set(['a', 'c', 'e', 'g', 'i', 'h', 's', 'r', 't'])
+>>> blank_word = w
+>>> for l in letters:
+...     blank_word.replace(l,'_')
+...     blank_word.replace(l.upper(),'_')
+... 
+'Is__c the Gre_t'
+'Isaac the Great'
+'Isaa_ the Great'
+'Isaac the Great'
+'Isaac th_ Gr_at'
+'Isaac the Great'
+'Isaac the Great'
+'Isaac the _reat'
+'Isaac the Great'
+'_saac the Great'
+'Isaac t_e Great'
+'Isaac the Great'
+'I_aac the Great'
+'Isaac the Great'
+'Isaac the G_eat'
+'Isaac the Great'
+'Isaac _he Grea_'
+'Isaac the Great'
+>>> blank_word
+'Isaac the Great'
+>>> for l in letters:
+...     blank_word = blank_word.replace(l,'_')
+...     blank_word = blank_word.replace(l.upper(),'_')
+... 
+>>> blank_word
+'_____ ___ _____'
+>>> 

@@ -14,14 +14,12 @@ def check_guess (word, guess):
     If it is wrong, return False
     If it is right, return True
     """
-    search = guess
-    word.find(search) ## Oops -- this line doesn't do anything - TH
     if guess in word:     
         return True
     else:
         return False
        
-    pass
+    
 
 def is_complete(guesses, word): #from hinkle extra help
     return guesses==set(list(word))
@@ -40,7 +38,7 @@ def display_lives (lives):
 
 
 def get_player_guess ():
-    guess=raw_input("what is you guess?")
+    guess=raw_input("Guess a Letter!")
     return guess
 
 
@@ -55,6 +53,7 @@ def main ():
 	if right:
             print "You got it! There is a(n)",guess
             guesses.add(guess)
+            
             complete = is_complete(guesses, word)
             if complete:
                 print 'Your word was',word
