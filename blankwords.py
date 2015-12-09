@@ -5,7 +5,7 @@ def setestablish():
 
 #a=['Mario','Link','Pikachu','Donkey Kong', 'Samus', 'Fox', 'Yoshi', 'Kirby','Luigi','Captain Falcon', 'Ness', 'Jigglypuff']
 #print a
-print setestablish()
+#print setestablish()
 
 #i = "Mario"
 #if "e" in i:
@@ -13,7 +13,10 @@ print setestablish()
 b="mario"
 blank_word=b
 letters = set(b)
+#guessed = ['a','i','o']
+goodguessed=raw_input('your guess?')
 for l in letters:
-    blank_word.replace(l,"_")
-    blank_word.replace(l.upper(),'_')
-    print 
+    if l not in goodguessed:
+        blank_word = blank_word.replace(l,"_")
+        blank_word = blank_word.replace(l.upper(),'_')
+print blank_word
