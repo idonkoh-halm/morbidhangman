@@ -1,4 +1,5 @@
 import time
+import random
 def get_word_from_list():
 #Get word from list function made by Isaac.
     '''Retrieves word from a list following a player chosen number that represents a word from that list.'''
@@ -41,8 +42,27 @@ def get_player_guess ():
     guess=raw_input("Guess a Letter!")
     return guess
 
-
+def blankwords(word,guess):
+    blank_word=word
+    letters = set(word)
+    goodguessed=guess
+    for l in letters:
+        if l not in goodguessed:
+            blank_word = blank_word.replace(l,"_")
+            blank_word = blank_word.replace(l.upper(),'_')
+    print blank_word    
+    return blank_word
+        
+        
 def main ():
+    response_list = ['bad times ahead.','bad tem ahead']
+    response_list_dark = ['']
+    response_list_darker = ['']
+    response_list_yetdarker = ['']
+    random.shuffle(response_list)
+    random.shuffle(response_list_dark)
+    random.shuffle(response_list_darker)
+    random.shuffle(response_list_yetdarker)
     guesses=set()
     lives=10
     word=get_word_from_list()
@@ -53,7 +73,7 @@ def main ():
 	if right:
             print "You got it! There is a(n)",guess
             guesses.add(guess)
-            
+            blankwords(word,guesses)
             complete = is_complete(guesses, word)
             if complete:
                 print 'Your word was',word
@@ -67,6 +87,9 @@ def main ():
                 print 'The chair holding the victim is kicked, securing his fate. A moment passes. Silence.'
                 time.sleep(5)
                 print 'You monster.'
+            elif lives==9:
+                print response_list.pop()
+                
             
 def test_check_guess ():
     if check_guess('python','a')==False:
